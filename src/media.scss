@@ -1,0 +1,285 @@
+
+@media (max-width: 1200px) {
+  .search__input{
+    min-width: 600px;
+  }
+}
+@media (max-width: 1050px) {
+  .search__input {
+    min-width: 400px;
+  }
+}
+@media (max-width: 880px) {
+  .inner {
+    width: calc(100% - 60px);
+  }
+ 
+  .search{
+    margin-left: 45px;
+  }
+  .search__input {
+    min-width: unset;
+  }
+  .details{
+    flex-direction: column;
+    .info{
+      max-width: none;
+      margin-bottom: 20px;
+      &__btn{
+        width: 100%;
+      }
+    }
+    
+  }
+  .cast{
+    &__items{
+      flex-direction: unset;
+      flex-wrap: wrap;
+      gap: 20px;
+      .cast__item + .cast__item{
+        margin-top: 0;
+      }
+      
+    }
+
+  }
+  .video{
+    .modal{
+  height: 200px;
+}
+    .popUp{
+      top: 32px;
+    }
+    &__img{
+      height: 200px;
+    }
+  }
+  .left-panel{
+    transform: translateX(-200%);
+    display: none;
+   
+    &__opener{
+      img{
+        width: 40px;
+      }
+      display: block;
+      
+      top: 52px;
+     left: 38px;
+     z-index: 5;
+     cursor: pointer;
+      position: absolute;
+    }
+  }
+  .left-panel.show{
+    transform: translateX(0) ;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    
+  }
+.left-panel{
+  &__scroll{
+    margin-top: 60px;
+    height: calc(100vh - 210px);
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color:  rgba(255,255,255, .9) transparent;
+    
+  }
+ 
+    &__scroll::-webkit-scrollbar{
+      display: block;
+      width: 5px;
+      height: 20px;
+    }
+    &__scroll::-webkit-scrollbar-thumb {
+      width: 5px;
+      height: 20px;
+      border-radius: 10px;
+      background-color: rgba(255,255,255, .9);
+    
+    }
+    &::-webkit-scrollbar-track{
+      background-color: transparent;
+      
+    }
+  &__inner{
+    border-radius: unset;
+    
+  }
+
+  .menu{
+    &__list{
+      // position: absolute;
+      // width: 100%;
+      // left: 0;
+      // right: 0;
+    }
+  }
+}
+.slider{
+  &__item img{
+    height: 200px;
+  }
+}
+.logIn{
+  margin-bottom: 0;
+  margin-top: 0!important;
+}
+}
+
+@media (max-width: 680px) {
+  .search__input {
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .inner {
+    width: calc(100% - 50px);
+  }
+
+  .header {
+    &__inner {
+      flex-direction: column;
+    }
+  }
+  .list {
+    margin-top: 30px;
+  }
+  .slider {
+    &__btn {
+      height: 40px;
+      font-size: 15px;
+      line-height: 14px;
+    }
+    &__btn-more {
+      &::before {
+        top: 7px;
+        bottom: 0;
+      }
+    }
+    &__btn-play {
+      &::before {
+        bottom: 6px;
+      }
+    }
+  }
+  .trending {
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-items: center;
+    }
+    &__item + .trending__item {
+        margin-left: 0;
+      }
+    &__items.all {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-items: center;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next{
+  color: #3dd2cc !important;
+  display: none !important;
+  }
+  .slider{
+    &__item img{
+      height: 150px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .slider {
+    &__btn-more {
+      width: 136px;
+      bottom: 6px;
+      right: 6px;
+    }
+    &__btn-play {
+      width: 134px;
+      right: 150px;
+      bottom: 6px;
+    }
+  }
+  .trending {
+    &__title {
+      font-size: 20px;
+    }
+  }
+  .search{
+    margin-bottom: 20px;
+  }
+  .video{
+    .popUp{
+      top: 44px;
+    }
+    &__img{
+      height: 150px;
+    }
+   &__btn{
+    img{
+      width: 60px;
+      height: 60px;
+    }
+   }
+   &__btn-text{
+    font-size: 20px;
+    line-height: 32px;
+   }
+  }
+  .details{
+    .info__list-item{
+      font-size: 14px;
+    }
+  }
+  .left-panel{
+    &__inner{
+      position: fixed;
+      right: 0;
+      left: 0;
+      overflow-y: auto;
+    }
+  }
+}
+
+@media (max-width: 450px){
+    .slider {
+        &__btn{
+            height: 30px;
+            padding:   4px 0px 3px 8px;
+           &::before{
+            display: none;
+           }
+           
+        }
+        &__btn-more {
+          width: 90px;
+          bottom: 6px;
+          right: 6px;
+        }
+        &__btn-play {
+          width: 80px;
+          right: 102px;
+          bottom: 5px;
+        }
+      }
+      .details .descr {
+        font-size: 16px;
+      }
+      .logIn{
+        margin-bottom: 18px;
+      }
+      .slider{
+        &__item img{
+          height: 100px;
+        }
+      }
+}
